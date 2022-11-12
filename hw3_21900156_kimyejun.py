@@ -51,7 +51,7 @@ while True:
                 if check == 'y':
                     break
         except:
-            print("error:", sys.exc_info()[0])
+            print("error:", sys.exc_info()[1])
             raise
         finally:
             f.close()
@@ -59,6 +59,6 @@ while True:
     except IOError as err:
         print("{0}".format(err))
     except:
-        print("Unexpected error:", sys.exc_info()[0])
+        print("Unexpected error:", sys.exc_info()[1])
         raise
         
